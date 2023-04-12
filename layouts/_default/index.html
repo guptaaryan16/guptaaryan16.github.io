@@ -1,0 +1,254 @@
+{{ define "main"}}
+<!-- cover page -->
+{{ $hero := resources.Get "images/hero-image.jpg" }}
+<div class="p-1 data-bs-target text-white text-center" id="cover-page" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ $hero.RelPermalink }});">
+    <div class="row py-lg-5">
+        <div class="col-lg-8 col-md-8 mx-auto">
+            {{ $cover := resources.Get "images/cover-photo.png" }}
+            <img src="{{ $cover.RelPermalink }}" alt="my-profile-pic" id="my-profile-pic">
+            <h1 class="fw- ">Hey! I am Aryan Gupta</h1>
+            <h3 class="fw- ">ML Enthusiast | OSS Developer</h3>
+            <p class="lead text-body-secondary">Welcome to My Website 👋</p>
+
+            <a href="#" class="fa fa-twitter" id="fa"></a>
+            <a href="https://github.com/guptaaryan16" class="fa fa-github" id="fa"></a>
+            <a href="https://www.instagram.com/guptaaryan16/" class="fa fa-instagram" id="fa"></a>
+            <a href="https://www.linkedin.com/in/guptaaryan16" class="fa fa-linkedin" id="fa"></a>
+            <a class="arrow down"></a>
+
+        </div>
+    </div>
+</div>
+
+<div class="container px-4">
+    <br>
+    <!-- About Me Section -->
+    <h2 class="display-5" id="about">About Me</h2>
+    <p>Hi there, I am Sophomore in Electrical Engineering Major at IITR and an ML enthusiast. I have done various
+        courses in machine learning and Deep Learning and have good knowledge of CNNs and NLP systems. Recently I have
+        worked in GANs and Adversarial security and have gained good exposure in the same. <br> </p>
+    <p>
+        &emsp;&emsp;Besides ML, I am a big fan of general development and is have studied C++ basis and now trying to
+        learn the advanced features as well. Also I have been a part of Open-Source and have contributed to libraries
+        like PyTorch-Ignite. I have also participated in ML reproducbility challenge 2023 and have done some research on
+        Double Sampling Randomized Smoothing.</p>
+
+    <div class="row d-flex justify-content-center mt-70 mb-70">
+
+        <div class="col-md-6">
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+                    <h5 class="card-title">My Updates</h5>
+                    <div class="scroll-area">
+                        <div class="vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-success"></i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title">Meeting with client</h4>
+                                        <p>Meeting with USA Client, today at <a href="javascript:void(0);"
+                                                data-abc="true">12:00 PM</a></p>
+                                        <span class="vertical-timeline-element-date">9:30 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-warning"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <p>Another meeting with UK client today, at <b class="text-danger">3:00 PM</b>
+                                        </p>
+                                        <p>Yet another one, at <span class="text-success">5:00 PM</span></p>
+                                        <span class="vertical-timeline-element-date">12:25 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-danger"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title">Discussion with team about new product launch</h4>
+                                        <p>meeting with team mates about the launch of new product. and tell them about
+                                            new
+                                            features</p>
+                                        <span class="vertical-timeline-element-date">6:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-primary"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title text-success">Discussion with marketing team</h4>
+                                        <p>Discussion with marketing team about the popularity of last product</p>
+                                        <span class="vertical-timeline-element-date">9:00 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-success"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title">Purchase new hosting plan</h4>
+                                        <p>Purchase new hosting plan as discussed with development team, today at <a
+                                                href="javascript:void(0);" data-abc="true">10:00 AM</a></p>
+                                        <span class="vertical-timeline-element-date">10:30 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-warning"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <p>Another conference call today, at <b class="text-danger">11:00 AM</b></p>
+                                        <p>Yet another one, at <span class="text-success">1:00 PM</span></p>
+                                        <span class="vertical-timeline-element-date">12:25 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-warning"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <p>Another meeting with UK client today, at <b class="text-danger">3:00 PM</b>
+                                        </p>
+                                        <p>Yet another one, at <span class="text-success">5:00 PM</span></p>
+                                        <span class="vertical-timeline-element-date">12:25 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-danger"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title">Discussion with team about new product launch</h4>
+                                        <p>meeting with team mates about the launch of new product. and tell them about
+                                            new
+                                            features</p>
+                                        <span class="vertical-timeline-element-date">6:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-primary"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title text-success">Discussion with marketing team</h4>
+                                        <p>Discussion with marketing team about the popularity of last product</p>
+                                        <span class="vertical-timeline-element-date">9:00 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-success"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <h4 class="timeline-title">Purchase new hosting plan</h4>
+                                        <p>Purchase new hosting plan as discussed with development team, today at <a
+                                                href="javascript:void(0);" data-abc="true">10:00 AM</a></p>
+                                        <span class="vertical-timeline-element-date">10:30 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-timeline-item vertical-timeline-element">
+                                <div>
+                                    <span class="vertical-timeline-element-icon bounce-in">
+                                        <i class="badge badge-dot badge-dot-xl badge-warning"> </i>
+                                    </span>
+                                    <div class="vertical-timeline-element-content bounce-in">
+                                        <p>Another conference call today, at <b class="text-danger">11:00 AM</b></p>
+                                        <p>Yet another one, at <span class="text-success">1:00 PM</span></p>
+                                        <span class="vertical-timeline-element-date">12:25 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Article Section -->
+        <h2 class="display-5">Blog Posts</h2>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+                    style="background-color: #B5C9C3;">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+                    style="background-color: #B5C9C3;">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional
+                            content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{ end }}
