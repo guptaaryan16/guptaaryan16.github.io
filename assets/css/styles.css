@@ -76,7 +76,7 @@ body {
     left: 67px;
     height: 100%;
     width: 4px;
-    background: #B5C9C3;
+    background: #74A4BC;
     border-radius: .25rem;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .vertical-timeline-element-icon .badge-dot-xl {
-    box-shadow: 0 0 0 5px #B5C9C3;
+    box-shadow: 0 0 0 5px #74A4BC;
 }
 
 .badge-dot-xl {
@@ -120,7 +120,7 @@ body {
     left: 50%;
     top: 50%;
     margin: -5px 0 0 -5px;
-    background: #B5C9C3;
+    background: #74A4BC;
 }
 
 .vertical-timeline-element-content {
