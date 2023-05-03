@@ -46,7 +46,6 @@ body {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #CFD8D7;
     background-clip: border-box;
     border: 1px solid rgba(26, 54, 126, 0.125);
     border-radius: .25rem;
@@ -76,7 +75,7 @@ body {
     left: 67px;
     height: 100%;
     width: 4px;
-    background: #74A4BC;
+    background: #26547C;
     border-radius: .25rem;
 }
 
@@ -97,7 +96,7 @@ body {
 }
 
 .vertical-timeline-element-icon .badge-dot-xl {
-    box-shadow: 0 0 0 5px #74A4BC;
+    box-shadow: 0 0 0 5px #26547C;
 }
 
 .badge-dot-xl {
@@ -120,8 +119,8 @@ body {
     left: 50%;
     top: 50%;
     margin: -5px 0 0 -5px;
-    background: #74A4BC;
-    color: #74A4BC;
+    background: #26547C;
+    color: #26547C;
 }
 
 .vertical-timeline-element-content {
@@ -145,7 +144,7 @@ body {
     top: 0;
     padding-right: 10px;
     text-align: right;
-    color: #B5C9C3;
+    color: #26547C;
     font-size: .7619rem;
     white-space: nowrap;
 }
