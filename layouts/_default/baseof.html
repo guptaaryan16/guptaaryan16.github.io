@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head.html" . }}
-
-<body style="background-color: #b4dbcf;">
+{{ if .IsHome }}        
+    <body style="background-color: #F2F3D9;">
+{{else}}
+    <body style="background-color: #F2F3D9;">
+{{end}}
     {{- partial "header.html" . -}}
     <main>
         {{- block "main" . }}{{- end }}

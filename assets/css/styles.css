@@ -1,5 +1,8 @@
 body {
     background-color: #B5C9C3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .fakeimg {
@@ -153,4 +156,9 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+#footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
 }

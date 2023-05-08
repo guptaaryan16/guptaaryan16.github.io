@@ -1,6 +1,157 @@
-{{ define "main" }}
-<article>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+{{- define "main" }}
+
+<article class="post-single">
+    
+    {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden
+    }}
+    {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+    {{- if (.Param "ShowToc") }}
+    {{- partial "toc.html" . }}
+    {{- end }}
+
+<div class="container">
+
+    <div class="row" style="margin-top: 5rem;">
+        <div class="col-lg-8">
+            <!-- the actual blog post: title/author/date/content -->
+            <h1>{{ .Title }}
+            {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}</h1>
+            <p class="lead"><i class="fa fa-user"></i> by <a href="">{{.Params.Author}}</a>
+            </p>
+            <hr>
+            <p><i class="fa fa-calendar"></i> Posted on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+            {{- if .Summary }}
+            <div class="post-description">
+                {{ .Summary }}
+            </div>
+            {{- end }}
+            <hr>
+            <!-- Main content -->
+            {{.Content}}
+            <br />
+            <br />
+            <br />
+            <h4>Like the post? Post about it!</h4>
+            </p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="">Tweet</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+
+            <div class="g-plusone" data-annotation="inline" data-width="300" data-href=""></div>
+
+            <!-- Helyezd el ezt a címkét az utolsó +1 gomb címke mögé. -->
+            <script type="text/javascript">
+                (function () {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/platform.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+            </script>
+            <br />
+            <hr>
+
+            <!-- the comment box -->
+            <div class="well">
+                <h4><i class="fa fa-paper-plane-o"></i> Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+                </form>
+            </div>
+            <script src="https://apis.google.com/js/plusone.js">
+            </script>
+            <hr>
+
+            <!-- the comments -->
+            <h3><i class="fa fa-comment"></i> User One says:
+                <small> 9:41 PM on August 24, 2023</small>
+            </h3>
+            <p>Excellent post! Thank You the great article, it was useful!</p>
+
+            <h3><i class="fa fa-comment"></i> User Two says:
+                <small> 9:47 PM on August 24, 2023</small>
+            </h3>
+            <p>Excellent post! Thank You the great article, it was useful!</p>
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="well">
+                <h4><i class="fa fa-search"></i> Blog Search...</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /well -->
+            <div class="well">
+                <h4><i class="fa fa-tags"></i> Popular Tags:</h4>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            {{ range .Params.categories }}
+                            <li><a href="">{{.}}</a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /well -->
+            <div class="well">
+                <h4><i class="fa fa-thumbs-o-up"></i> Follow me!</h4>
+                <ul>
+                    <p><a title="Facebook" href="https://www.facebook.com/guptaaryan1604"><span class="fa-stack fa-lg"><i
+                                    class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-facebook fa-stack-1x"></i></span></a> 
+                                <a title="Twitter" href="https://twitter.com/AryanGu75422077"><span
+                                class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-twitter fa-stack-1x"></i></span></a> <a title="Google+" href=""><span
+                                class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-google-plus fa-stack-1x"></i></span></a> <a title="Linkedin"
+                            href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-linkedin fa-stack-1x"></i></span></a> <a title="GitHub" href=""><span
+                                class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-github fa-stack-1x"></i></span></a> <a title="Bitbucket" href=""><span
+                                class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i
+                                    class="fa fa-bitbucket fa-stack-1x"></i></span></a></p>
+                </ul>
+            </div>
+            <!-- /well -->
+            <div class="well">
+                <h4><i class="fa fa-fire"></i> Popular Posts:</h4>
+                <ul>
+                    {{range .Params.Pages}}
+                    <li><a href="">{{.}}</a></li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="">Tweet</a>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+
+    <div class="g-plusone" data-annotation="inline" data-width="300" data-href=""></div>
+
+    <!-- Helyezd el ezt a címkét az utolsó +1 gomb címke mögé. -->
+    <script type="text/javascript">
+        (function () {
+        var po = document.createElement('script'); po.type = 'text/javascrpo.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.pareninsertBefore(po, s);
+    })();
+</script>
+
 </article>
-{{ end }}
+{{- end }}
+{{/* end main */}}
