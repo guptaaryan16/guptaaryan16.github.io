@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="container px-4" style="height: 40rem;">
+<div class="container px-4" style="height: 40rem; margin-left: 10%;">
 {{.Content}}
 {{ $tags := .Site.Taxonomies.tags }}
 {{ range $name, $tag := $tags }}
