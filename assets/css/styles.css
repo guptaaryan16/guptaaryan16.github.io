@@ -106,6 +106,7 @@ body {
     width: 18px;
     height: 18px;
     position: relative;
+    color: #26547C;
 }
 
 .badge:empty {
