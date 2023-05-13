@@ -1,10 +1,37 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Aryan Gupta'
 [taxonomies]
     tags = "tags"
     categories = "categories"
 
-
 pygmentsUseClasses=true
 pygmentsCodeFences=true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog Posts"
+    url = "/posts/"
+    weight = 2
+    [[menu.main]]
+    weight = 3
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    [[menu.main]]
+    weight = 4
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/#About"
+    title = ""

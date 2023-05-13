@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container px-4" style="height: 40rem;">
+{{.Content}}
+{{ $tags := .Site.Taxonomies.tags }}
+{{ range $name, $tag := $tags }}
+<div class="posts-container mx-auto px-3 py-5">
+
+<h3>{{ $name | humanize}}</h3>
+<ul>
+    {{ range $index, $page := $tag.Pages }}
+    <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+</div>
+{{end}}

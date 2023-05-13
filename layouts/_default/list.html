@@ -1,3 +1,24 @@
 {{ define "main" }}
-Hello This is the First list page of the site
+<div class="container px-8" style="height: 40rem; margin-left: 10%;">
+{{.Content}}
+{{ $prev := 3000}}
+{{range .Site.RegularPages}}
+{{if .Date}}
+{{if gt $prev (.Date.Format "2006")}}
+{{ if ne $prev 3000}}
 {{ end }}
+<div class="posts-container mx-auto px-3 py-5">
+<h3>{{ .Date.Format "2006" }}</h3>
+    <ul class="list mb-5">
+    {{end}}
+        <li>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+            <span >{{.Date.Format "Monday, Jan 2, 2006"}}</span>
+        </li>
+   
+    {{ $prev = .Date.Format "2006"}}
+    {{end}}
+    {{end}}
+    </ul>
+</div>
+{{end}}
