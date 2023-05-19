@@ -24,11 +24,11 @@ Follow the steps below to set up the website locally:
 - Clone this repository to your local machine using the following command:
 
 ```
-git clone https://github.com/your-username/hugo-portfolio-blog.git
+git clone git@github.com:guptaaryan16/guptaaryan16.github.io.git
 ```
 - Navigate to the project's root
 ```
-cd hugo-portfolio-blog
+cd guptaaryan16.github.io
 ```
 - Install the required dependencies by running:
 ```
