@@ -14,7 +14,7 @@ This repository contains the source code and content for my personal portfolio a
 ## Prerequisites
 To run and modify this website locally, you need to have the following installed on your machine:
 
-- Hugo (version X.X.X)
+- Hugo
 - Git
 
 ## Getting Started
