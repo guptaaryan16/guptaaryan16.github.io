@@ -105,7 +105,7 @@ body {
 .badge-dot-xl {
     width: 18px;
     height: 18px;
-    position: absolute;
+    position: relative;
     color: #26547C;
 }
 
@@ -159,7 +159,7 @@ body {
     clear: both;
 }
 #footer {
-    position: static;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
