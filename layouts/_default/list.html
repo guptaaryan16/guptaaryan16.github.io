@@ -8,14 +8,15 @@
 {{ if ne $prev 3000}}
 {{ end }}
 <div class="posts-container mx-auto px-3 py-5">
-<h3>{{ .Date.Format "2006" }}</h3>
-    <ul class="list mb-5">
+<h2>{{ .Date.Format "2006" }}</h2>
+    <div class="list mb-5">
     {{end}}
-        <li>
-            <a href="{{.Permalink}}">{{.Title}}</a>
+        <div>
+            <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
             <span >{{.Date.Format "Monday, Jan 2, 2006"}}</span>
-        </li>
-   
+            <hr>
+        </div>
+    
     {{ $prev = .Date.Format "2006"}}
     {{end}}
     {{end}}

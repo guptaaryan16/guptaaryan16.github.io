@@ -5,10 +5,14 @@
 {{ range $name, $tag := $tags }}
 <div class="posts-container mx-auto px-3 py-5">
 
-<h3>{{ $name | humanize}}</h3>
+<h2>{{ $name | humanize}}</h3>
 <ul>
     {{ range $index, $page := $tag.Pages }}
-    <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+    <div>
+        <h3><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h3>
+        <span>{{.Date.Format "Monday, Jan 2, 2006"}}</span>
+        <hr>
+    </div>
     {{ end }}
 </ul>
 {{ end }}

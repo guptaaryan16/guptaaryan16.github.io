@@ -35,3 +35,6 @@ pygmentsCodeFences=true
     name = "About"
     url = "/#About"
     title = ""
+  
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
