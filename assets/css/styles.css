@@ -10,17 +10,13 @@ body {
 canvas {
     display: block;
     vertical-align: bottom;
-    /* background-color: #0d1b2a; */
 }
 
 /* ---- particles.js container ---- */
 #particles-js {
     width: 100%;
-    height: min(100vh, 100vw);
+    height: min(100vh, 125vw);
     background-color: #0d1b2a;
-    /* background-image: url(""); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     background-position: 50% 50%;
 }
 
@@ -89,11 +85,6 @@ canvas {
 }
 
 #cover-page {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-
-    /* Set a specific height */
-
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
