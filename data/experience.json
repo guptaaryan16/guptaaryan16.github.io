@@ -1,8 +1,16 @@
 {
     "experience" : [
         {
+            "name": "Inter IIT Tech Meet 12.0 - Adobe Challenge" ,
+            "date": "February 2023",
+            "content": [
+            "Completed challenge by Adobe to predict the tweets text and likes using LLMs",
+            "Used models like LLAMA-7b and techniques like LORA and Adapter methods"
+        ]
+        },
+        {
             "name": "Quansight Labs Intern" ,
-            "date": "July 2023 - Present",
+            "date": "July 2023 - September 2023",
             "content": [
             "Working on Pytorch Ignite-Code generator with Victor Fomin(maintainer)",
             "Like to work on the PyData ecosystem"
@@ -15,7 +23,7 @@
             "Contribued an Example on Super Resoultion GAN in Pytorch-Ignite main repository",
             "Added some features in Create supervised trainer class",
             "Contributed to some routine CI issues",
-            "Created my AI App called AIKavach which verifies  Smoothing radius of various models"
+            "Created my AI App called AIKavach which verifies smoothing radius of various models"
             ]
         },
         {
