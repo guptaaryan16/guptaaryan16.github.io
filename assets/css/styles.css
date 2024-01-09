@@ -5,6 +5,70 @@ body {
     flex-direction: column;
 }
 
+/* Adding content for paticles.js */
+/* ---- reset ---- */
+canvas {
+    display: block;
+    vertical-align: bottom;
+    /* background-color: #0d1b2a; */
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #0d1b2a;
+    /* background-image: url(""); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+/* Completing particles.js */
+
+#coverContent{
+    position: absolute;
+    z-index: 10;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
 .fakeimg {
     height: 200px;
     background: #aaa;
@@ -12,22 +76,22 @@ body {
 
 #my-profile-pic {
     vertical-align: middle;
-    max-width: 20%;
+    max-width: 10%;
     height: auto;
-    margin: 20px 0;
+    margin: 10px 0;
     border-radius: 100%;
 }
 
 #fa {
     color: aliceblue;
     font-size: x-large;
+    padding-right: 1%;
 }
 
 #cover-page {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
 
     /* Set a specific height */
-    height: 70%;
 
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -89,7 +153,6 @@ body {
 
 .vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
     visibility: visible;
-    animation: cd-bounce-1 .8s;
 }
 
 .vertical-timeline-element-icon {
@@ -105,14 +168,9 @@ body {
 .badge-dot-xl {
     width: 18px;
     height: 18px;
-    position: relative;
+    position: absolute;
     color: #26547C;
 }
-
-.badge:empty {
-    display: none;
-}
-
 
 .badge-dot-xl::before {
     content: '';
@@ -158,6 +216,7 @@ body {
     display: table;
     clear: both;
 }
+
 #footer {
     position: relative;
     bottom: 0;
