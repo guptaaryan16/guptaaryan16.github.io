@@ -36,10 +36,10 @@
     <h2 class="display-5" id="about">About Me</h2>
     <p>Hi there, I am a Junior in Electrical Engineering Major at IITR and an ML enthusiast. I have done various machine learning and Deep Learning courses and have good knowledge of CNNs and NLP systems. I have recently worked in GANs and Adversarial security and have gained good exposure. <br> </p>
     <p>
-        &emsp;&emsp;Besides ML, I am a big fan of general software development, especially in the PyData ecosystem. I studied C++ basics in college and am now trying to learn the advanced features. Also, I have been a part of the Open-Source Python community and have contributed to libraries like PyTorch-Ignite. I have also participated in the ML reproducibility challenge 2023 and have done some research on Double Sampling Randomized Smoothing.</p>
+        &emsp;&emsp;Besides ML, I am a big fan of general software development, especially in the PyData ecosystem. I studied C and C++ as well in college and had a good time with Data Structures and Algorithms. I am now trying to learn the advanced features and CUDA programming which seems important in the age of big "LLMs". Also, I have been a part of the Open-Source Python community and have contributed to libraries like PyTorch, PyTorch-Ignite, mlx and few others. I have also participated in the ML reproducibility challenge 2023 and have done some research on Double Sampling Randomized Smoothing along with the original authors :-).</p>
 
+    <!--  The timeline for all the experiences (uses BootStrap 5) -->
     <div class="row d-flex justify-content-center mt-70 mb-70">
-
         <div class="col-md-6">
             <div class="main-card mb-3 card">
                 <div class="card-body" style="background-color: #DAF0EE;">
@@ -72,11 +72,10 @@
         </div>
     </div>
         <br>
-        <!-- Article Section -->
+        <!-- Article Section ( Mentions Blog Posts )-->
         <h2 class="display-5">Blog Posts</h2>
         <div class="row mb-2">
-            {{ range .Site.RegularPages.ByDate.Reverse }}
-            {{ if .Params.on_home}}
+            {{ range first 2 .Site.RegularPages.ByDate.Reverse }}
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
                     style="background-color: #DAF0EE;">
@@ -101,9 +100,20 @@
                     </div>
                 </div>
             </div>
-            {{end}}
             {{ end }}
-        P.S. This website is in Heavy development and may take some time to be set up completely 🫡
+
+        <div class="container px-4">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Good News!</h4>
+                <p>I have worked on the functionality of the site and seems like it works now, well most of the features and so hopefully I am going to be making a lot of great blog posts on AI and Open Source this year. Well, follow me on twitter for more updates!
+                <br><br>
+                Let me know about any bugs, or report them to the  <a href="https://github.com/guptaaryan16/guptaaryan16.github.io">original repo</a>
+                </p>
+                <hr>
+                <p class="mb-0">Updated: 11 Jan, 2024</p>
+            </div>
     </div>
+    </div>
+    
 {{ end }}
 

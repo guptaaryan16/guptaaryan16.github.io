@@ -3,9 +3,29 @@
 {{ partial "head.html" . }}
 <body id="body">
     {{- partial "header.html" . -}}
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search Blog Posts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+                    <script src="/pagefind/pagefind-ui.js"></script>
+                    <div id="search"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
         {{- block "main" . }}{{- end }}
     </main>
+
     {{- partial "footer.html" . -}}
+
 </body>
 </html>
