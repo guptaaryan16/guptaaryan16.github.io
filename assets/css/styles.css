@@ -2,11 +2,12 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #F2F3D9;
 }
 
 /* Body colour defined here, For some reason does not work well with the above body tag */
 /* TODO: Reformat the CSS to the best practices  */
-#body { 
+#body-color { 
     background-color: #F2F3D9;
 }
 
