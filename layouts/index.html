@@ -3,10 +3,9 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
 <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 
-<!-- The new backgorund image -->
+<!-- The new background image -->
 <div id="particles-js">
     <div class="p-1 data-bs-target text-white text-center" >
-
     <div class="row py-lg-5">
         <div id="coverContent">
             {{ $cover := resources.Get "images/cover-photo.png" }}
@@ -14,8 +13,6 @@
             <h1 class="fw- ">Hey! I am Aryan Gupta</h1>
             <h3 class="fw- ">ML Enthusiast | OSS Developer</h3>
             <p class="lead text-body-secondary">Welcome to My Website 👋</p>
-    
-    
             <p class="lead text-body-secondary"></p>
             <a href="{{ .Site.Data.contact.twitter }}" class="fa fa-twitter" id="fa"></a>
             <a href="{{ .Site.Data.contact.github }}" class="fa fa-github" id="fa"></a>
@@ -37,20 +34,13 @@
     <br>
     <!-- About Me Section -->
     <h2 class="display-5" id="about">About Me</h2>
-    <p>Hi there, I am a Junior in Electrical Engineering Major at IITR and an ML enthusiast. I have done various
-    machine learning and Deep Learning courses and have good knowledge of CNNs and NLP systems. I have recently
-    worked in GANs and Adversarial security and have gained good exposure. <br> </p>
+    <p>Hi there, I am a Junior in Electrical Engineering Major at IITR and an ML enthusiast. I have done various machine learning and Deep Learning courses and have good knowledge of CNNs and NLP systems. I have recently worked in GANs and Adversarial security and have gained good exposure. <br> </p>
     <p>
-        &emsp;&emsp;Besides ML, I am a big fan of general software development, especially in the PyData ecosystem. I studied C++ basics in
-        college and am now trying to learn the advanced features. Also, I have been a part of the Open-Source Python community
-        and have contributed to libraries like PyTorch-Ignite. I have also participated in the ML reproducibility challenge 2023
-        and have done some research on Double Sampling Randomized Smoothing.</p>
+        &emsp;&emsp;Besides ML, I am a big fan of general software development, especially in the PyData ecosystem. I studied C++ basics in college and am now trying to learn the advanced features. Also, I have been a part of the Open-Source Python community and have contributed to libraries like PyTorch-Ignite. I have also participated in the ML reproducibility challenge 2023 and have done some research on Double Sampling Randomized Smoothing.</p>
 
     <div class="row d-flex justify-content-center mt-70 mb-70">
 
         <div class="col-md-6">
-      <!-- <p>Another meeting with UK client today, at <b class="text-danger">3:00 PM</b> for red text -->
-    <!-- <span class="text-success">December 2022 - Present</span><p> for green text -->
             <div class="main-card mb-3 card">
                 <div class="card-body" style="background-color: #DAF0EE;">
                     <h5 class="card-title">My Updates</h5>
@@ -59,9 +49,8 @@
                             {{ range $.Site.Data.experience.experience }}
                             <div class="vertical-timeline-item vertical-timeline-element">
                                 <div>
-
                                     <span class="vertical-timeline-element-icon bounce-in">
-                                        <i class="badge badge-dot badge-dot-xl badge-danger"> </i>
+                                        <i class="badge badge-dot badge-dot-xl badge-danger" id="badge"> </i>
                                     </span>
                                     <div class="vertical-timeline-element-content bounce-in">
                                         <h4 class="timeline-title">{{ .name }}</h4>

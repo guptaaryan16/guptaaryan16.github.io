@@ -1,5 +1,6 @@
 {{ define "main" }}
-<div class="container px-8" style="height: 40rem; margin-left: 10%;">
+<div class="container px-8" id="list-page">
+
 {{.Content}}
 {{ $prev := 3000}}
 {{range .Site.RegularPages}}
@@ -7,16 +8,17 @@
 {{if gt $prev (.Date.Format "2006")}}
 {{ if ne $prev 3000}}
 {{ end }}
-<div class="posts-container mx-auto px-3 py-5">
+<div class="posts-container mx-auto px-1 py-5">
 <h2>{{ .Date.Format "2006" }}</h2>
     <div class="list mb-5">
     {{end}}
+    <ul>
         <div>
-            <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+            <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
             <span >{{.Date.Format "Monday, Jan 2, 2006"}}</span>
             <hr>
         </div>
-    
+    </ul>
     {{ $prev = .Date.Format "2006"}}
     {{end}}
     {{end}}

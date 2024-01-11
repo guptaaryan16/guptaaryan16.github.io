@@ -1,20 +1,21 @@
 {{ define "main" }}
-<div class="container px-4" style="height: 40rem;">
+<div class="container px-4" id="list-page">
 {{.Content}}
-{{ $tags := .Site.Taxonomies.tags }}
+<!-- Iterating over all the tags to find pages -->
+{{ $tags := .Site.Taxonomies.tags }} 
 {{ range $name, $tag := $tags }}
-<div class="posts-container mx-auto px-3 py-5">
-
-<h2>{{ $name | humanize}}</h3>
-<ul>
-    {{ range $index, $page := $tag.Pages }}
-    <div>
-        <h3><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h3>
-        <span>{{.Date.Format "Monday, Jan 2, 2006"}}</span>
-        <hr>
+    <div class="posts-container mx-auto px-1 py-5">
+        <h2>{{ $name | humanize}}</h3>
+            <!-- Iterating over the posts pages  -->
+            {{ range $index, $page := $tag.Pages }}
+                <ul>
+                    <div>
+                        <h4><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></h4>
+                        <span>{{.Date.Format "Monday, Jan 2, 2006"}}</span>
+                        <hr>
+                    </div>
+                </ul>
+            {{ end }}
     </div>
     {{ end }}
-</ul>
-{{ end }}
-</div>
 {{end}}

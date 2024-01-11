@@ -1,6 +1,17 @@
 {
     "experience" : [
         {
+            "name": "Open Source Contributions " ,
+            "date": "December 2022 - Present",
+            "content": [
+            "Contribued an Example on Super Resoultion GAN in Pytorch-Ignite main repository",
+            "Added some features in Create supervised trainer class",
+            "Contributed to some routine CI issues",
+            "Created my AI App called AIKavach which verifies smoothing radius of various models",
+            "Made first issue in the MLX-apple frame-work! Yay!"
+            ]
+        },
+        {
             "name": "Inter IIT Tech Meet 12.0 - Adobe Challenge" ,
             "date": "February 2023",
             "content": [
@@ -16,16 +27,7 @@
             "Like to work on the PyData ecosystem"
             ]
         },
-        {
-            "name": "Open Source Contributions " ,
-            "date": "December 2022 - Present",
-            "content": [
-            "Contribued an Example on Super Resoultion GAN in Pytorch-Ignite main repository",
-            "Added some features in Create supervised trainer class",
-            "Contributed to some routine CI issues",
-            "Created my AI App called AIKavach which verifies smoothing radius of various models"
-            ]
-        },
+        
         {
             "name": "Inter IIT Tech Meet 11.0 - ISRO Challenge" ,
             "date": "February 2023",

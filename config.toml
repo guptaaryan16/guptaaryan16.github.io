@@ -7,7 +7,7 @@ title = 'Aryan Gupta'
 
 pygmentsUseClasses=true
 pygmentsCodeFences=true
-
+googleAnalytics="G-4RVTZ5FQQF"
 [menu]
   [[menu.main]]
     identifier = "home"

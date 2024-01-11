@@ -1,6 +1,6 @@
 {{- define "main" }}
-
-<article class="post-single">
+    
+<article class="post-single" >
     
     {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden
     }}
@@ -9,7 +9,7 @@
     {{- partial "toc.html" . }}
     {{- end }}
 
-<div class="container">
+<div class="container" id="single-page">
 
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-8">
@@ -59,18 +59,6 @@
         </div>
 
         <div class="col-lg-4">
-            <div class="well">
-                <h4><i class="fa fa-search"></i> Blog Search...</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-                <!-- /input-group -->
-            </div>
             <!-- /well -->
             <div class="well">
                 <h4><i class="fa fa-tags"></i> Popular Tags:</h4>
@@ -105,9 +93,9 @@
             </div>
             <!-- /well -->
             <div class="well">
-                <h4><i class="fa fa-fire"></i> Popular Posts:</h4>
+                <h4><i class="fa fa-fire"></i> Latest Posts:</h4>
                 <ul>
-                    {{range .Site.RegularPages}}
+                    {{ range first 2 .Site.RegularPages.ByDate.Reverse }}
                     <li><a href="">{{.Title}}</a></li>
                     {{end}}
                 </ul>
@@ -117,8 +105,6 @@
 
 
     <hr>
-</script>
-
 </article>
 {{- end }}
 {{/* end main */}}

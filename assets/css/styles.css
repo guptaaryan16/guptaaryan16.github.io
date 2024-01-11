@@ -1,8 +1,13 @@
 body {
-    background-color: #B5C9C3;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+/* Body colour defined here, For some reason does not work well with the above body tag */
+/* TODO: Reformat the CSS to the best practices  */
+#body { 
+    background-color: #F2F3D9;
 }
 
 /* Adding content for paticles.js */
@@ -82,6 +87,7 @@ canvas {
     color: aliceblue;
     font-size: x-large;
     padding-right: 1%;
+    text-decoration: none;
 }
 
 #cover-page {
@@ -91,6 +97,14 @@ canvas {
     position: relative;
 }
 
+#list-page{
+    min-height: 88vh;
+    align-content: center;
+}
+
+#single-page {
+    min-height: 83vh;
+}
 
 .card {
     box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
@@ -147,9 +161,13 @@ canvas {
 }
 
 .vertical-timeline-element-icon {
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 60px;
+}
+
+#badge{
+    display: block;
 }
 
 .vertical-timeline-element-icon .badge-dot-xl {
@@ -209,7 +227,8 @@ canvas {
 }
 
 #footer {
-    position: relative;
+    position: static;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    min-height: 7vh;
 }
