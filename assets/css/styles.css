@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+    
 /* Body colour defined here, For some reason does not work well with the above body tag */
 /* TODO: Reformat the CSS to the best practices  */
 #body-color { 
