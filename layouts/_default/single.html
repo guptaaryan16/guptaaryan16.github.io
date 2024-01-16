@@ -95,8 +95,11 @@
             <div class="well">
                 <h4><i class="fa fa-fire"></i> Latest Posts:</h4>
                 <ul>
-                    {{ range first 2 .Site.RegularPages.ByDate.Reverse }}
-                    <li><a href="">{{.Title}}</a></li>
+                    {{$title := .Title}}
+                    {{ range first 3 .Site.RegularPages.ByDate.Reverse }}
+                        {{ if ne .Title $title }}
+                        <li> <a href="{{.Permalink}}">{{.Title}}</a></li>
+                        {{ end }}
                     {{end}}
                 </ul>
             </div>
