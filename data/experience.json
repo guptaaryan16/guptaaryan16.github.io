@@ -1,6 +1,14 @@
 {
     "experience" : [
         {
+            "name": "LFX Mentee WasmEdge CNCF " ,
+            "date": "March 2024 - May 2024(Expected)",
+            "content": [
+            "Working on completing integration betweem WasmEdge Runtime and Apple MLX framework",
+            "Working on C++ API for MLX currently for loading models and inference in C++"
+            ]
+        },
+        {
             "name": "Open Source Contributions " ,
             "date": "December 2022 - Present",
             "content": [
