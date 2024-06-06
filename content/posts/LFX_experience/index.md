@@ -30,17 +30,16 @@ One of the challenges I faced was implementing the custom module in a way that w
 
 After that the task was to complete the mlx_llm.cpp  library, use it as a separate dependency for WasmEdge project. Then I added files `mlx.h` and `mlx.cpp` for using the model in the Wasi-NN plugin that can now be accessed by the usage of the framework.
 
-![Figure 1: An example NN that could be built using mlx components and my new mlx_llm.cpp library (used for testing the new Wasi-NN MLX plugin)](./images/Untitled.png)
-
-Figure 1: An example NN that could be built using mlx components and my new mlx_llm.cpp library (used for testing the new Wasi-NN MLX plugin)
+<img src="./images/Untitled.png" width=100%>
+<center>Figure 1 : An example NN that could be built using mlx components and my new mlx_llm.cpp library (used for testing the new Wasi-NN MLX plugin) </center>
 
 ### Benchmarking:
 
 The sample example built using the mlx_llm.cpp library API was able to provide important differences between the speeds of python and CPP API on MLX and thus improving the ecosystem for the whole new projects that are going to come in the future. 
 
-| Time (in s) | Python API Model      | CPP API model | Speed Up |
-| :---------- | :-------------------: | :-----------: | :------: |
-| Test_nn     | 0.0003715919494628906 | 8.1458e-05    | ~ 4.56x  |
+<img src="./images/benchmarks.png" alt-text="Figure 2: Benchmarks for example" width=100%>
+<center> Figure 2 : Benchmarks for example </center>
+
 
 The speed up even if it is for a small neural network is worth saying and could lead us to better performant edge nn than llama.cpp in future. Sadly I am not able to complete the complete implementation of an LLM model like phi3 (under progress) with the new library and thus we need more time for comparing token speeds of both the ecosystems i.e. mlx_llm.cpp and llama.cpp .
 
