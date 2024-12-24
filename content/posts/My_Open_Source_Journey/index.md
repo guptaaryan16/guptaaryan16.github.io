@@ -1,14 +1,18 @@
 ---
-title: "My Open Source Journey"
-date: 2024-01-15T14:39:56+05:30
+title: "First Steps in Open Source"
+date: 2022-11-15T14:39:56+05:30
 draft: false
 summary: "My Open Source Adventure: Challenges, Triumphs, and Lessons Learned"
-tags: ["Programming"]
-categories: ["Programming", "Open-Source"]
-Author: "Aryan Gupta"
-type: "page"
-layout: "posts"
+description: ""
+toc: true
+readTime: true
+autonumber: false
+math: true
+tags: []
+showTags: false
+hideBackToTop: false
 ---
+
 
 **So how did I start Open-Source and how it changed my development journey? This post mentions my reasons to start contributing to OSS repos and learn more about different ML Open Source communities in the world! Also this post contains some advice for people wanting to undertake this journey as well.**
 
@@ -18,7 +22,7 @@ layout: "posts"
 ## How it Started... 
 Somewhere in December last year, I was bored. I was tired of giving hackathons, not because of coding but because of similar repetitive tasks, like making an app or website or some other consumer-facing tech, which I will never bring to production. Also, I wanted to learn something new apart from the same boilerplate stuff.
 
-So the next step was to transition from the usual hackathons to something new, like having more problems to solve but also having some flexibility regarding the projects and the type of task I wanted to work on. I also started to see some great videos about open source on YouTube, which inspired me to build and study open-source maintained projects; I want to learn more about development and how to be a better programmer. This led me to read some interesting open source codebases, initially something like Hugo, as I built this Blog website with it. So it could be easy, or so I thought. But I was wrong. 
+So the next step was to transition from the usual hackathons to something new, like having more problems to solve but also having some flexibility regarding the projects and the type of task I wanted to work on. I also started to see some great videos about open source on YouTube, which inspired me to build and study open-source maintained projects; I want to learn more about development and how to be a better programmer. This led me to read some interesting open source codebases, initially something like Hugo, as I built my last blog website with it(now scrapped for this theme). So it could be easy, or so I thought. But I was wrong. 
 
 To begin with, I needed to be more comfortable working with the programming language. Thus, Python was the obvious choice to start with Open Source instead of Go, where I needed more experience. So I quickly shifted to python based projects. This does not mean you can begin OSS with only Python or contribute to projects with only the language you know. Still, it's just to make the beginning in small steps that you can take without much fatigue instead of adding a lot of complexity and not being able to achieve anything later.
 
@@ -55,3 +59,4 @@ Contributing to and maintaining open-source software projects can be a very fulf
 3. https://gohugo.io
 
 
+***[Edited 23 December 2024]***

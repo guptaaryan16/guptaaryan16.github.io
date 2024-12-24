@@ -1,46 +1,100 @@
-baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Aryan Gupta'
-[taxonomies]
-    tags = "tags"
-    categories = "categories"
+title = 'g_aryan16'
+theme = 'typo'
+copyright = "Aryan Gupta"
 
-pygmentsUseClasses=true
-pygmentsCodeFences=true
 googleAnalytics="G-4RVTZ5FQQF"
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "posts"
-    name = "Blog Posts"
-    url = "/posts/"
-    weight = 2
-    [[menu.main]]
-    weight = 3
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    [[menu.main]]
-    weight = 4
-    identifier = "about"
-    pre = ""
-    post = ""
-    name = "About"
-    url = "/#About"
-    title = ""
-  
-[markup.goldmark.renderer]
-  unsafe = true # Allow HTML in md files
 
+# # # Disable tags
+# disableKinds = ['taxonomy']
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Home meta description
+description = "A tech-oriented personal blog curated by Aryan Gupta."
+faviconPath = '/static'
+
+# Appearance settings
+theme = 'dark'
+colorPalette = 'default'
+hideHeader = false
+
+singleDateFormat = '2 Jan 2006'
+
+# Collection to display on home
+#homeCollectionTitle = 'Posts'
+#homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 5
+listSummaries = true
+listDateFormat = '02 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+showFooter = true
+footerContent = """Content by g_aryan16. Thanks for visiting. Copyright © 2024 Aryan Gupta"""
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/guptaaryan16/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/guptaaryan16"
+
+[[params.social]]
+name = "x"
+url = "https://x.com/g_aryan16"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+#[[params.menu]]
+#name = "library"
+#url = "/library"
+
+# [[params.menu]]
+# name = "tags"
+# url = "/tags"
+
+
+
+# Syntax highligth on code blocks
 [markup]
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false 
-    startLevel = 2
+[markup.highlight]
+style = 'catppuccin-frappe'
+
+# Deploy settings
+[[deployment.matchers]]
+pattern = "^.+\\.(js|css|svg|ttf|woff2)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg|gif|webp)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[params.giscus]
+enable = false
+repo = "tomfran/blog"
+repoid = "R_kgDOLtSszw"
+category = "General"
+categoryid = "DIC_kwDOLtSsz84CfLm4"
+mapping = "pathname"
+theme = "preferred_color_scheme"
